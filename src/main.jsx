@@ -16,7 +16,7 @@ import "./styles/table.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider> {/* 👈 ADD THIS WRAPPER */}
+      <ThemeProvider>
         <TransactionProvider>
           <AppRoutes />
         </TransactionProvider>
