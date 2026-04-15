@@ -1,0 +1,280 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  transition: transform 0.3s ease;
+}
+
+/* LOGO */
+.sidebar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* NAV */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* NAV ITEM */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  background: var(--border);
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  background: #111827;
+  color: white;
+}
+
+/* FOOTER */
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* HAMBURGER */
+.hamburger {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  color: var(--text);
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background: #111827;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .sidebar {
+    position: relative;
+    transform: translateX(0);
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 999;
+
+    will-change: transform;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+.nav-item.active {
+  background: #111827;
+  color: white;
+
+  transform: translateX(6px);
+
+  box-shadow:
+    0 0 10px rgba(17, 24, 39, 0.35),
+    0 0 20px rgba(17, 24, 39, 0.15);
+
+  transition: all 0.25s ease;
+}
+.nav-item.active {
+  animation: glowPulse 2.5s infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 8px rgba(17, 24, 39, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(17, 24, 39, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(17, 24, 39, 0.25);
+  }
+}
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* AVATAR */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #111827;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* TEXT */
+.profile-info .name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.profile-info .email {
+  font-size: 12px;
+  color: var(--muted);
+}
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+/* LOGO BOX */
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111827;
+  color: white;
+
+  box-shadow: 0 0 12px rgba(17, 24, 39, 0.3);
+}
+
+/* TEXT */
+.brand-text h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand-text p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}

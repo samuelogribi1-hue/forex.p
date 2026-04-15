@@ -1,0 +1,92 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ========== LIGHT THEME DEFAULT ========== */
+:root {
+  --bg: #f4f6f8;
+  --text: #111827;
+
+  --card: #ffffff;
+  --border: #e5e7eb;
+
+  --primary: #111827;
+  --muted: #6b7280;
+
+  --sidebar: #ffffff;
+}
+
+/* ========== DARK THEME ========== */
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+
+  --card: #1e293b;
+  --border: #1f2937;
+
+  --primary: #ffffff;
+  --muted: #94a3b8;
+
+  --sidebar: #111827;
+}
+
+/* ========== GLOBAL BODY ========== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ========== GLOBAL ELEMENTS ========== */
+.card,
+.section,
+.wallet-container,
+.auth-card,
+.settings-card,
+.chart-box,
+.stat-card,
+.send-container,
+.analytics-container {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* ========== INPUTS ========== */
+input,
+textarea {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+}
+
+/* ========== NAV ITEMS ========== */
+.nav-item {
+  color: var(--text);
+}
+
+.nav-item:hover {
+  background: var(--border);
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

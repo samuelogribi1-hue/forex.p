@@ -1,0 +1,82 @@
+.wallet-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.wallet-container h1 {
+  margin-bottom: 20px;
+}
+
+/* BALANCE CARD */
+.balance-card {
+  background: linear-gradient(135deg, #111827, #374151);
+  color: white;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+}
+
+.balance-card h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* INPUT */
+.wallet-actions input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-group button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.deposit {
+  background: #16a34a;
+  color: white;
+}
+
+.withdraw {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-group button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .wallet-container {
+    padding: 10px;
+  }
+
+  .balance-card {
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+}
