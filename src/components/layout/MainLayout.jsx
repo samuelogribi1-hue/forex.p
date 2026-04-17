@@ -1,5 +1,5 @@
 import Sidebar from "./Sidebar";
-import "../../styles/layout.css";
+import "../../styles/outlay.css"
 
 const MainLayout = ({ children }) => {
   return (
