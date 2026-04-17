@@ -8,7 +8,7 @@ import { ThemeProvider } from "./context/ThemeContext"; // 👈 ADD THIS
 
 import "./styles/global.css";
 import "./styles/sidebar.css";
-import "./styles/layout.css";
+// import "./styles/layout.css";
 import "./styles/dashboard.css";
 import "./styles/form.css";
 import "./styles/table.css";
